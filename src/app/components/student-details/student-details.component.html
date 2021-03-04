@@ -1,0 +1,40 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Course Fee</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of students">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.courseFees}}</td>
+          
+    </tr>
+  </tbody>
+</table>
+<h3>Update Employee</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="updateStudent()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="Name" required [(ngModel)]="student.name" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Age</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.age" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Course Fees</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="student.courseFees" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

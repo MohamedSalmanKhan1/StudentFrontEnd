@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Course Fee</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of students">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.courseFees}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,56 @@
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+  
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              required
+              [(ngModel)]="student.name"
+              name="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="text"
+              class="form-control"
+              id="age"
+              required
+              [(ngModel)]="student.age"
+              name="age"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="courseFees">Course Fees</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseFees"
+              required
+              [(ngModel)]="student.courseFees"
+              name="age"
+            />
+          </div>
+  
+        <button (click)="createStudent()" class="btn btn-success">Create</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You successfully created a student record!</h3>
+        <button class="btn btn-success" (click)="newStudent()">New..</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="submitted">
+    <h3>You successfully created a product!</h3>
+    <button class="btn btn-success" (click)="newStudent()">New..</button>
+  </div>
+</div>
